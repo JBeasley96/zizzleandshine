@@ -72,7 +72,7 @@ document.getElementById("zizzleEnquiries").addEventListener("submit", function(e
     emailjs.send("service_i9mh0ih", "template_35ust0n", {
         from_name: name,
         email: email,
-        phone_number: phone,
+        phone: phone,
         message: message
     })
     .then(function() {

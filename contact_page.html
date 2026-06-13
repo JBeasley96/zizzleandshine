@@ -38,7 +38,7 @@
 <div>
 <input id="name" type="text" placeholder="Name"><br><br>
 <input id="email"type="email" placeholder="Email"><br><br>
-<input id="phone"type="text" placeholder="Phone number"><br><br>
+<input id="phone_number"type="text" placeholder="Phone number"><br><br>
 <textarea id ="description" placeholder =" Please give a brief description."></textarea>
 <br>
 <button type="submit">Submit</button>
@@ -52,7 +52,7 @@ document.getElementById("zizzleEnquiries").addEventListener("submit", function(e
 
     const name = document.getElementById("name").value.trim();
     const email = document.getElementById("email").value.trim();
-    const phone = document.getElementById("phone").value.trim();
+    const phone = document.getElementById("phone_number").value.trim();
     const message = document.getElementById("description").value.trim();
 
     // Save to localStorage
@@ -72,7 +72,7 @@ document.getElementById("zizzleEnquiries").addEventListener("submit", function(e
     emailjs.send("service_i9mh0ih", "template_35ust0n", {
         from_name: name,
         email: email,
-        phone: phone,
+        phone_number: phone,
         message: message
     })
     .then(function() {

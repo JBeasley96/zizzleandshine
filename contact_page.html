@@ -38,7 +38,7 @@
 <div>
 <input id="name" type="text" placeholder="Name"><br><br>
 <input id="email"type="email" placeholder="Email"><br><br>
-<input id="phoneNumber"type="number" placeholder="Phone number"><br><br>
+<input id="phone"type="number" placeholder="Phone number"><br><br>
 <textarea id ="description" placeholder =" Please give a brief description."></textarea>
 <br>
 <button type="submit">Submit</button>
@@ -50,27 +50,29 @@
 document.getElementById("zizzleEnquiries").addEventListener("submit", function(e) {
     e.preventDefault();
 
-    const name = document.getElementById("name").value;
-    const email = document.getElementById("email").value;
-    const message = document.getElementById("description").value;
-    const phone = document.getElementById("phoneNumber").value;
+    const name = document.getElementById("name").value.trim();
+    const email = document.getElementById("email").value.trim();
+    const phone = document.getElementById("phone").value.trim();
+    const message = document.getElementById("description").value.trim();
 
     // Save to localStorage
     let messages = JSON.parse(localStorage.getItem("messages")) || [];
+
     messages.push({
         name: name,
         email: email,
-        phone_Number:phoneNumber,
+        phone: phone,
         message: message,
         date: new Date().toLocaleString()
     });
+
     localStorage.setItem("messages", JSON.stringify(messages));
 
     // Send email via EmailJS
-    emailjs.send("service_i9mh0ih", "template_35ust0n", {
+    emailjs.send("YOUR_SERVICE_ID", "YOUR_TEMPLATE_ID", {
         from_name: name,
         reply_to: email,
-        phone_number: phoneNumber,
+        phone_number: phone,
         message: message
     })
     .then(function() {
@@ -83,7 +85,7 @@ document.getElementById("zizzleEnquiries").addEventListener("submit", function(e
     this.reset();
 });
 </script>
-
+   
 </body>
 <footer class="footer">
 <a href="https://www.facebook.com/share/1BxXmyzWGZ/?mibextid=wwXlfr" class="facebook-circle" target="_blank">

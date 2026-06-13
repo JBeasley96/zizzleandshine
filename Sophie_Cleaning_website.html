@@ -1,0 +1,94 @@
+<html>
+<!DOCTYPE html>
+<html lang ="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title> Zizzle And Shine </title>
+<link rel="stylesheet" href="Sophie_cleaning_css_stylesheet.css">
+</head>
+<body class="body">
+    <div>
+<header>
+    <img src="img/logo2.jpg" alt="Logo" class="floating-logo"></2.jpg>
+<div style="text-align:left;">
+</div>
+<img class="logonobg" src="img/logonobg.png" alt="logonobg">
+</div>
+</div>
+</header>
+</div>
+<div style="text-align:left;">
+</div>
+
+ <div class="dropdown" style="float:right;">
+<button class="dropbtn">Menu</button>
+<div class="dropdown-content"style="float:right;">
+<a href="Sophie_Cleaning_website.html">Home</a>
+<a href="Sophie_cleaning_gallery.html">Gallery</a>
+<a href="contact_page.html">Contact Us</a></div>
+</div>
+<div class="body-content">
+    <div class="sloganContainer">
+<h2 " style="font-family:Times New Roman; color:hotpink"> Come shine with me,  come shine , lets shine away ... </h2>
+<p >Here at zizzle and shine we take pride in leave out customers happy,we work with our air bnb clients to ensure a safe and clean enviroment for thier guests. Our domestic clients typically has us in weekly to do smaller cleans just to keep on top of things.In otherwords there is no task to big or too small for zizzle and shine.</p>
+    </div>
+<div class="priceContainer">
+<h2>Pricing</h2>
+<p>
+<span class="item-name">Basic Plan</span>
+<span class="item-price">£</span>
+</p>
+<p>
+<span class="item-name">intermetidate plan</span>
+<span class="item-price">£</span>
+</p>
+<p>
+<span class="item-name">advance plan</span>
+<span class="item-price">£</span>
+</p>
+</div>
+</div>
+</div>
+<div class="review-widget">
+    <p id="reviewText"></p>
+</div>
+<script>
+const reviews = [
+    "“Amazing service! My house has never looked so clean.” – Sarah W.",
+    "“Reliable, friendly, and thorough. Highly recommend!” – James P.",
+    "“Fantastic attention to detail. Will definitely book again.” – Emily R.",
+    "“Professional and efficient. Five stars from me.” – Mark T."
+];
+
+let index = 0;
+const reviewText = document.getElementById("reviewText");
+
+function showReview() {
+    reviewText.classList.remove("show");
+
+    setTimeout(() => {
+        reviewText.textContent = reviews[index]; 
+        reviewText.classList.add("show"); 
+        index = (index + 1) % reviews.length; 
+    }, 1000); 
+}
+
+// Start the rotation
+showReview();
+setInterval(showReview, 5000); // change every 5 seconds
+</script>
+<footer class="footer">
+<a href="https://www.facebook.com/share/1BxXmyzWGZ/?mibextid=wwXlfr" class="facebook-circle" target="_blank">
+    <img src="img/Facebook_Logo_Secondary.png" alt="Facebook">
+</a>
+<p>Zizzle and shine - House keeping
+ </p>
+ <p>Servicing bury st edmunds and the surrounding area</p>
+  <p>Email adresse :zizzleandshinecleaning@gmail.com</p>
+
+
+</footer>
+
+</body>
+</html>

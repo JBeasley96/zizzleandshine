@@ -71,7 +71,7 @@ document.getElementById("zizzleEnquiries").addEventListener("submit", function(e
     // Send email via EmailJS
     emailjs.send("service_i9mh0ih", "template_35ust0n", {
         from_name: name,
-        reply_to: email,
+        reply_to: reply_to,
         phone_number: phone,
         message: message
     })
